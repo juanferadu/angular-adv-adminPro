@@ -1,0 +1,39 @@
+<!-- <h2 class="text-center">Agregar Noticia</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Titulo:</label>
+      <input type="text" formControlName="nombre" [(ngModel)]="noticia.nombre"
+      placeholder="nombre" name="nombre" class="form-control" id="username">
+    </div>
+
+    <div class="form-group">
+      <label>Descripcion</label>
+      <input formControlName="descripcion" placeholder="descripcion"  [(ngModel)]="noticia.descripcion"
+      name="descripcion" class="form-control" id="firstName">
+    </div>
+
+    <button class="btn btn-success">Guardar</button>
+  </form> -->
+
+
+  <div class="container custom-container">
+    <div class="col-md-12">
+      <h3 class="mb-3 text-center">Crear Noticia</h3>
+  
+      <div class="form-group">
+        <input type="text" [(ngModel)]="noticia.nombre" class="form-control" placeholder="titulo">
+      </div>
+  
+      <div class="form-group">
+        <textarea  [(ngModel)]="noticia.descripcion" class="form-control"  name="w3review" rows="4" cols="50"></textarea>
+        <!-- <input type="text" [(ngModel)]="noticia.descripcion"  placeholder="descripcion"> -->
+      </div>
+  
+    
+  
+      <div class="form-group">
+        <button class="btn btn-success btn-lg btn-block" (click)="onSubmit()">Guardar</button>
+      </div>
+  
+    </div>
+  </div>

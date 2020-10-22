@@ -1,18 +1,17 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import {Router} from "@angular/router";
-import { RestService } from './service/rest.service';
+import { RestService } from '../../service/rest.service';
 import { map } from 'rxjs/operators';
-import { Noticia } from './models/Noticia';
-
-
+import { Noticia } from '../../models/Noticia';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-listar-noticias',
+  templateUrl: './listar-noticias.component.html',
+  styleUrls: ['./listar-noticias.component.css']
 })
-export class AppComponent {
+export class ListarNoticiasComponent {
+
   title = 'app';
   noticias: Noticia[];
   isSolicitud: Promise<boolean>;
@@ -45,8 +44,7 @@ export class AppComponent {
   };
 
   listar(): void {
-    this.router.navigate(['listar-noticias']);
+    this.router.navigate(['listar-noticia']);
   };
-
 
 }
